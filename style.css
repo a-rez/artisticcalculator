@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+button {
+    color: white;
+    width: 100%;
+    height: 100%;   
+    font-size: 30px;
+
+    opacity: 0.5;
+}
+
+#main {
+    margin: 0 auto;
+    display: grid;
+    width: 760px;
+    height: 370px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        
+        "textbox textbox textbox textbox"
+        "xClear xBackspace xEnter xEnter"
+        "none none none none"
+        "none none none none"
+        "none none none none"
+        "x0 x0 x0 xSlash";  
+}
+
+input {
+    width: 99%;
+    height: 99%;
+    font-size: 50px;
+}
+
+
+
+
+
+
+#textbox {
+    grid-area: textbox;
+    margin-bottom: 5px;
+}
+    
+#xClear{
+    grid-area: xClear;
+}
+
+#xBackspace {
+    grid-area: xBackspace;
+
+}
+
+#xEnter{
+    grid-area: xEnter;
+}
+
+#x0{
+    grid-area: x0;
+    color: white;
+}
+
+#slash{
+    grid-area: xSlash;
+    color: rgb(83, 81, 81);
+}
+
+span {
+    position: fixed;
+    filter: blur(15px);
+    z-index: -1;
+    height: 120px;
+    width: 700px;
+    border-radius: 50%;
+    display: inline-block;
+
+    transition: width 9s, height 9s, background-color 9s, transform 2s;
+}
+
+span:hover { 
+    transform: rotate3d(2, -1, -1, -0.2turn);
+
+}
