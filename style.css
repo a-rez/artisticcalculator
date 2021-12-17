@@ -8,7 +8,7 @@ button {
     height: 100%;   
     font-size: 30px;
 
-    opacity: 0.5;
+    opacity: 1;
 }
 
 #main {
@@ -31,19 +31,16 @@ button {
 }
 
 input {
-    width: 99%;
+    width: 98.4%;
     height: 99%;
     font-size: 50px;
+    border: solid 5px black; 
 }
-
-
-
-
 
 
 #textbox {
     grid-area: textbox;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
     
 #xClear{
@@ -61,7 +58,7 @@ input {
 
 #x0{
     grid-area: x0;
-    color: white;
+    color: black;
 }
 
 #slash{
@@ -71,6 +68,12 @@ input {
 
 span {
     position: fixed;
+    height: 50px;
+    width: 4000px;
+    z-index: -1;
+    opacity: 0.7;
+    /*
+    position: fixed;
     filter: blur(15px);
     z-index: -1;
     height: 120px;
@@ -79,9 +82,9 @@ span {
     display: inline-block;
 
     transition: width 9s, height 9s, background-color 9s, transform 2s;
+    */
 }
 
 span:hover { 
-    transform: rotate3d(2, -1, -1, -0.2turn);
-
+    transform: rotate(4, -1, -1, -0.2turn);
 }
