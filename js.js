@@ -1,6 +1,10 @@
 // var math = require('mathjs');
 
+// const { sqrt } = require("mathjs");
+
 // import { sqrt } from 'mathjs'
+// import('mathjs')
+console.log(math.sqrt(4));
 
 let red = "#830509";
 let orange = "#b03500";
