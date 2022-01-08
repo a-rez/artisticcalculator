@@ -1,3 +1,17 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+*/
+
+@font-face {
+    font-family: "Aldrich";
+    src: url(Aldrich-Regular.ttf) format("truetype");
+}
+
+* {
+
+    font-family: 'Aldrich';
+}
+
 body {
     background-color: rgb(0, 0, 0);
 }
@@ -9,13 +23,19 @@ button {
     font-size: 30px;
 
     opacity: 1;
+    padding: 0px;
+    text-align: center;
+    padding-top: 5px;
 }
 
 #main {
     margin: 0 auto;
     display: grid;
-    width: 760px;
+    width: 750px;
+    height: 700px;
+    /*
     height: 370px;
+    */
     row-gap: 10px;
     column-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
@@ -23,22 +43,31 @@ button {
     grid-template-areas:
         
         "textbox textbox textbox textbox"
-        "xClear xBackspace xEnter xEnter"
+        "dot xClear xBackspace xEnter"
         "none none none none"
         "none none none none"
         "none none none none"
         "x0 x0 x0 xSlash";  
 }
 
+#dot {
+    grid-area: dot;
+}
+
 input {
     width: 98.4%;
     height: 99%;
-    font-size: 50px;
+    font-size: 70px;
     border: solid 5px black; 
+    font-family: 'Aldrich', sans-serif;
+    padding-left: 20px;
+
 }
 
 
+
 #textbox {
+    font-family: 'Aldrich';
     grid-area: textbox;
     margin-bottom: 10px;
 }
@@ -72,6 +101,7 @@ span {
     width: 4000px;
     z-index: -1;
     opacity: 0.7;
+
     /*
     position: fixed;
     filter: blur(15px);
@@ -85,6 +115,31 @@ span {
     */
 }
 
-span:hover { 
-    transform: rotate(4, -1, -1, -0.2turn);
+button:hover { 
+    border: solid red 10px;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+
+
+
+    /* box-shadow from getcssscan.com */ 
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+       rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+       rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+       rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+       rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+       rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+
+
+    /*
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    */
+}
+
+#x0:hover {
+    color: rgb(163, 163, 163);
 }
