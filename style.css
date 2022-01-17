@@ -10,17 +10,42 @@
 * {
 
     font-family: 'Aldrich';
+    font-size: 109%;
+
+    /*
+    font-size: 100%;
+    */
+
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: manual;
+    
+}
+
+html {
+    height: 98%;
 }
 
 body {
     background-color: rgb(0, 0, 0);
+
+    
+    height: 100%;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    
 }
 
 button {
     color: white;
     width: 100%;
     height: 100%;   
+    /*
     font-size: 30px;
+    */
 
     opacity: 1;
     padding: 0px;
@@ -28,11 +53,28 @@ button {
     padding-top: 5px;
 }
 
+
+
 #main {
     margin: 0 auto;
+    width: 100%;
+    height: 600px;
     display: grid;
-    width: 750px;
-    height: 700px;
+
+    min-width: 320px;
+
+    /*
+
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+
+    margin: 20px 0 0 -800px;
+    
+    */
+
+
     /*
     height: 370px;
     */
@@ -43,34 +85,52 @@ button {
     grid-template-areas:
         
         "textbox textbox textbox textbox"
-        "dot xClear xBackspace xEnter"
+        "dot xBackspace xClear xEnter"
         "none none none none"
         "none none none none"
         "none none none none"
         "x0 x0 x0 xSlash";  
 }
 
+#main > div {
+    width: 100%;
+}
 #dot {
     grid-area: dot;
 }
 
 input {
-    width: 98.4%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+    /*
+    width: 100%;
     height: 99%;
+    */
+    /*
     font-size: 70px;
+    */
     border: solid 5px black; 
     font-family: 'Aldrich', sans-serif;
+    /*
     padding-left: 20px;
+    */
 
 }
 
 
 
 #textbox {
+    box-sizing: border-box;
     font-family: 'Aldrich';
     grid-area: textbox;
     margin-bottom: 10px;
+
+    width: 100%;
 }
+
     
 #xClear{
     grid-area: xClear;
@@ -80,6 +140,7 @@ input {
     grid-area: xBackspace;
 
 }
+
 
 #xEnter{
     grid-area: xEnter;
@@ -93,6 +154,12 @@ input {
 #slash{
     grid-area: xSlash;
     color: rgb(83, 81, 81);
+}
+
+#xBackspace{
+    /*
+    background: url("backspace.svg");
+    */
 }
 
 span {
@@ -118,7 +185,7 @@ span {
 button:hover { 
     border: solid red 10px;
     background-color: rgb(255, 255, 255);
-    color: #333;
+    color: rgb(73, 73, 73);
 
 
 
@@ -142,4 +209,8 @@ button:hover {
 
 #x0:hover {
     color: rgb(163, 163, 163);
+}
+
+#xBackspace:hover {
+    background-color: aquamarine;
 }

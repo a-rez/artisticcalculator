@@ -340,6 +340,12 @@ document.addEventListener('keydown', (event) => {
 );
 
 // makes the front end
+/*
+let containdiv = document.createElement("div");
+containdiv.id = "container";
+document.body.append(containdiv);
+*/
+
 let maindiv = document.createElement("div");
 maindiv.id = "main";
 document.body.append(maindiv);
@@ -364,7 +370,7 @@ maindiv.appendChild(textboxdiv);
 
 let buttons = [];
 let divs = [];
-let list = [".","Clear", "Backspace", "Enter", "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "0", "/"];
+let list = [".", "Backspace", "Clear", "Enter", "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "0", "/"];
 
 let colors = [grey, grey, grey, grey, red, orange, yellow, grey, green1, green2, blue1, grey, blue2, blue3, purple, grey, white, grey];
 
@@ -376,7 +382,10 @@ function makeButtonsFromList (list, divs, buttons, colors) {
     for (let i = 0; i < list.length; i++) {
         buttons[i] = document.createElement("button");
         buttons[i].id = "x"+list[i];
-        buttons[i].textContent = list[i];
+        if (list[i] != "Backspace") {
+            buttons[i].textContent = list[i];
+
+        }
         buttons[i].style.border = "solid 5px black";
         buttons[i].style.backgroundColor = colors[i];
         divs[i] = document.createElement("div");
@@ -395,12 +404,13 @@ function makeButtonsFromList (list, divs, buttons, colors) {
         } 
 
         else if (list[i] == "Backspace"){
+            buttons[i].innerHTML = "Backspace";
 
             buttons[i].addEventListener("click", function() {
                 backspaceEventListener();
                 textbox.value = textbox.value.slice(0, -1);
             }
-                )
+            )
 
         }
 
