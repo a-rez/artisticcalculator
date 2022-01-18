@@ -11,14 +11,9 @@
 
     font-family: 'Aldrich';
     font-size: 109%;
-
-    /*
-    font-size: 100%;
-    */
-
     overflow-wrap: break-word;
     word-break: break-all;
-    hyphens: manual;
+    hyphens: auto;
     
 }
 
@@ -63,21 +58,7 @@ button {
 
     min-width: 320px;
 
-    /*
-
-    position: absolute;
-    
-    top: 50%;
-    left: 50%;
-
-    margin: 20px 0 0 -800px;
-    
-    */
-
-
-    /*
-    height: 370px;
-    */
+  
     row-gap: 10px;
     column-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
@@ -95,6 +76,22 @@ button {
 #main > div {
     width: 100%;
 }
+
+
+#infodiv {
+    height: 120px;
+    width: 700px;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    font-size: 12px;
+    padding: 10px;
+    border: solid 0px rgb(46, 46, 46); 
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
 #dot {
     grid-area: dot;
 }
@@ -156,11 +153,7 @@ input {
     color: rgb(83, 81, 81);
 }
 
-#xBackspace{
-    /*
-    background: url("backspace.svg");
-    */
-}
+
 
 span {
     position: fixed;

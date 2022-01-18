@@ -346,9 +346,20 @@ containdiv.id = "container";
 document.body.append(containdiv);
 */
 
+let containerdiv = document.createElement('div');
+containerdiv.id = "containerdiv"
+document.body.append(containerdiv);
+
+let infodiv = document.createElement('div');
+infodiv.id = "infodiv"
+containerdiv.append(infodiv);
+
+infodiv.innerHTML = "Ways to use this calculator: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<p>1. Your keyboard<p>2. On screen buttons<p>3. Textbox<p>Calculator will only accept one operation at a time.";
+
+
 let maindiv = document.createElement("div");
 maindiv.id = "main";
-document.body.append(maindiv);
+containerdiv.append(maindiv);
 
 let textboxdiv = document.createElement("div");
 textboxdiv.id = "textbox";
